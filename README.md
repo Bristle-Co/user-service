@@ -1,1 +1,1 @@
-read me
+this service is used to store data of all the users and employees in Bristle Co., Ltd
