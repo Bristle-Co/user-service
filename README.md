@@ -24,6 +24,8 @@ Once a jar is packaged, assuming the name of the .jar file is "user-service.0.0.
     java -jar user-service.0.0.1.jar -Dcustomer-detail-service=localhost -DDB_PASSWORD=Microservice@39909204 -DDB_USERNAME=microservice -DHOST=localhost -Dorder-service=localhost -Dproduction-ticket-service=localhost -Duser-service=localhost
 
 ### running with docker from image
+    docker pull andersonhsieh0330/user-service:<version>
+
 assuming the image repository is user-service and tag(<version>) is 0.0.1
 
     docker run -p 8089:8089 -p 9099:9099 -ti --env customer-detail-service=localhost --env DB_PASSWORD=Microservice@39909204 --env DB_USERNAME=microservice --env HOST=host.docker.internal --env order-service=localhost --env production-ticket-service=localhost --env user-service=localhost user-service:0.0.1
