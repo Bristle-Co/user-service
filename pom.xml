@@ -10,8 +10,9 @@
 	</parent>
 	<groupId>com.bristle</groupId>
 	<artifactId>user-service</artifactId>
+<!--	this version is reflected in the name of the jar file-->
 	<version>0.0.1</version>
-	<name>customer-detail-service</name>
+	<name>user-service</name>
 	<description>user service in bristle backend microservices architecture</description>
 	<properties>
 		<java.version>17</java.version>
@@ -57,6 +58,10 @@
 			<groupId>net.devh</groupId>
 			<artifactId>grpc-server-spring-boot-starter</artifactId>
 			<version>2.7.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -105,6 +110,12 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+<!--			purpose of this plug in is to be able to run flyway as a maven goal-->
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>9.3.0</version>
 			</plugin>
 		</plugins>
 	</build>
